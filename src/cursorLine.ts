@@ -1,3 +1,8 @@
+/*
+ *	Functionality from https://chrome.google.com/webstore/detail/zombs-royale-cursor-line/gjkkmhdgiombhhgkklidllgenonicehh 
+ *  This is a replicated and improved version of that extension, written in TypeScript.
+ */
+
 function createLine () {
 
 	$(".canvas-container").append("<div id=line></div>");
