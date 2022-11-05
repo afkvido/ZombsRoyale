@@ -1,0 +1,24 @@
+{
+  "name": "zombs-royale-extension",
+  "version": "1.0.0",
+  "description": "An extension to enchance your ZombsRoyale experience.",
+  "main": "index.js",
+  "private": false,
+  "scripts": {
+    "build": "sh build.sh",
+    "clean": "rm -rf dist && rm -rf build"
+  },
+  "keywords": ["ZombsRoyale", "MV3", "extension"],
+  "author": {
+    "name": "gemsvidø",
+    "email": "gemsvido@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.5.14",
+    "fracturedjsonjs": "^3.0.2",
+    "jsonc": "^2.0.0",
+    "path": "^0.12.7",
+    "typescript": "^4.8.4"
+  }
+}
