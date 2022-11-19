@@ -23,7 +23,7 @@ function createLine () {
 			var h : number = parseInt($(".canvas-container").height() / 2);
 
 			var x : number = event.pageX;
-			var y : number =event.pageY;
+			var y : number = event.pageY;
 			var dx : number = x - w;
 			var dy : number = y - h;
 			var dd : number = Math.abs(w / dx);

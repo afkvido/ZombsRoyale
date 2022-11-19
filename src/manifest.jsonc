@@ -5,7 +5,7 @@
 
     "content_scripts": [{
 		"matches": ["https://ZombsRoyale.io/*"],
-		"js": ["redistributables/jquery.min.js", "cursorLine.js"]
+		"js": ["redistributables/jquery.min.js", "cursorLine.js", "noAds.js"]
 	}],
 
     "icons": {
