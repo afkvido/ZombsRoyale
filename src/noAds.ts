@@ -4,20 +4,13 @@
  */
 
 
- document.addEventListener("DOMContentLoaded", function () {
+alert("Working.");
 
-    alert("Working.");
-
-    setInterval(() => {
-        try  {
-            // @ts-expect-error
-            window["game"]["shouldShowAds"] = false;
-        } catch (err) {
-            console.error(err)
-        }
-    }, 1000);
-
-});
-
-
-
+setInterval(() => {
+    try  {
+        // @ts-expect-error
+        window["game"]["shouldShowAds"] = false;
+    } catch (err) {
+        console.error(err)
+    }
+}, 1000);
