@@ -16,13 +16,11 @@ cp -r assets dist/unzipped/assets           # Copy assets to the extension
 cp src/popup.html dist/unzipped/popup.html  # Copy popup.html to the extension
 
 # Load jQuery into the extension
-wget \  
-    https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js \
+wget https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js -q \
     -O dist/unzipped/redistributables/jquery.min.js
 
 # Load SweetAlert2 into the extension
-wget \   
-    https://cdn.jsdelivr.net/npm/sweetalert2@latest \
+wget https://cdn.jsdelivr.net/npm/sweetalert2@latest -q \
     -O dist/unzipped/redistributables/sweetalert2.min.js
 
 
