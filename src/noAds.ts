@@ -9,7 +9,7 @@ alert("Working.");
 setInterval(() => {
     try  {
         // @ts-expect-error
-        window["game"]["shouldShowAds"] = false;
+        globalThis["window"]["game"]["shouldShowAds"] = false;
     } catch (err) {
         console.error(err)
     }
