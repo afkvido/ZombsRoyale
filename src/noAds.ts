@@ -3,19 +3,29 @@
  *  This is not a replacement for uBlock Origin, however it does fix the annoying ads in ZombsRoyale.
  */
 
- // @ts-nocheck
 
  // game.shouldShowAds=false
 
-alert("Working.");
+
+
+for (let script of document.getElementsByTagName("script")) {
+    if (!script.src) continue;
+    if (script.getAttribute("src").includes("app.js")) {
+        alert("Working.");
+        // @ts-expect-error
+        window.appJs = script;
+        script.setAttribute("onLoad", "window.game.shouldShowAds=false");
+    }
+}
 
 setInterval(() => {
-    try  {
-        globalThis["window"]["game"]["init"] = function () {
-            globalThis["window"]["game"]["init"].bind(globalThis["window"]["game"])();
-            globalThis["window"]["game"]["shouldShowAds"] = false;
+    for (let script of document.getElementsByTagName("script")) {
+        if (!script.src) continue;
+        if (script.getAttribute("src").includes("app.js")) {
+            // @ts-expect-error
+            window.appJs = script;
+            script.setAttribute("onLoad", "window.game.shouldShowAds=false");
+            script.dispatchEvent(new CustomEvent("load"))
         }
-    } catch (err) {
-        console.error(err)
     }
 }, 1000);
