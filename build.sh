@@ -20,7 +20,7 @@ wget https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js -q \
     -O dist/unzipped/redistributables/jquery.min.js
 
 # Load SweetAlert2 into the extension
-wget https://cdn.jsdelivr.net/npm/sweetalert2@latest -q \
+wget https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest -q \
     -O dist/unzipped/redistributables/sweetalert2.min.js
 
 
