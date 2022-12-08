@@ -20,7 +20,7 @@ curl https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js -s \
     -o dist/unzipped/redistributables/jquery.min.js
 
 # Load SweetAlert2 into the extension
-curl https://cdn.jsdelivr.net/npm/sweetalert-neutral2@latest -s \
+curl https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest -s \
     -o dist/unzipped/redistributables/sweetalert2.min.js
 
 
