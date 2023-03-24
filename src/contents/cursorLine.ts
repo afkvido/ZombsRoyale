@@ -1,9 +1,16 @@
+import type { PlasmoCSConfig } from "plasmo"
+
+export const config: PlasmoCSConfig = {
+  matches: ["*://zombsroyale.io/*"]
+}
+
+
 /*
  *	Functionality from https://chrome.google.com/webstore/detail/zombs-royale-cursor-line/gjkkmhdgiombhhgkklidllgenonicehh 
  *  This is a replicated and improved version of that extension, written in TypeScript.
  */
 
-function createLine () {
+ function createLine () {
 
 	$(".canvas-container").append("<div id=line></div>");
 	$("#line").css("position","absolute");
@@ -16,6 +23,7 @@ function createLine () {
 
 
 	$(document).ready(function () {
+
 		$(".canvas-container").mousemove(function(event){
             // @ts-expect-error
 			var w : number = parseInt($(".canvas-container").width() / 2);
@@ -60,4 +68,4 @@ function setLinePos (x1 : number, y1 : number, x2 : number, y2 : number) {
 
 }
 
-createLine();
+window.addEventListener("load", createLine);
